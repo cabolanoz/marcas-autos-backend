@@ -1,3 +1,11 @@
 <Solution>
-  <Project Path="MarcasAutos.Tests/MarcasAutos.Tests.csproj" />
+  <Folder Name="/src/">
+    <Project Path="src/MarcasAutos.Api/MarcasAutos.Api.csproj" />
+    <Project Path="src/MarcasAutos.Application/MarcasAutos.Application.csproj" />
+    <Project Path="src/MarcasAutos.Domain/MarcasAutos.Domain.csproj" />
+    <Project Path="src/MarcasAutos.Infrastructure/MarcasAutos.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MarcasAutos.Tests/MarcasAutos.Tests.csproj" />
+  </Folder>
 </Solution>

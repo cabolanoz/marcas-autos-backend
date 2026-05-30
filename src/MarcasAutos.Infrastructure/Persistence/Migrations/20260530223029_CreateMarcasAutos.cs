@@ -5,7 +5,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace MarcasAutos.Api.Migrations
+namespace MarcasAutos.Infrastructure.Persistence.Migrations
 {
     /// <inheritdoc />
     public partial class CreateMarcasAutos : Migration

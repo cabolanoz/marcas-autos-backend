@@ -24,6 +24,7 @@ artifacts/
 *.sln.iml
 
 # Test results and coverage
+coverage-report/
 TestResults/
 coverage/
 coverage.cobertura.xml

@@ -27,7 +27,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MarcasAutos.Api\MarcasAutos.Api.csproj" />
+    <ProjectReference Include="..\..\src\MarcasAutos.Api\MarcasAutos.Api.csproj" />
+    <ProjectReference Include="..\..\src\MarcasAutos.Application\MarcasAutos.Application.csproj" />
+    <ProjectReference Include="..\..\src\MarcasAutos.Domain\MarcasAutos.Domain.csproj" />
+    <ProjectReference Include="..\..\src\MarcasAutos.Infrastructure\MarcasAutos.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
