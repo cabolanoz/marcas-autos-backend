@@ -36,4 +36,22 @@ public class MarcasAutosControllerTest
         Assert.Contains(brands, brand => brand.Nombre == "KIA");
         Assert.Contains(brands, brand => brand.Nombre == "Nissan");
     }
+
+    [Fact]
+    public async Task GetAll_ReturnsEmptyList_WhenNoBrandsExist()
+    {
+        var options = new DbContextOptionsBuilder<AppDbContext>()
+            .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+            .Options;
+
+        await using var context = new AppDbContext(options);
+
+        var controller = new MarcasAutosController(context);
+        var result = await controller.GetAll();
+
+        var okResult = Assert.IsType<OkObjectResult>(result);
+        var brands = Assert.IsAssignableFrom<IEnumerable<MarcaAutoResponse>>(okResult.Value);
+
+        Assert.Empty(brands);
+    }
 }

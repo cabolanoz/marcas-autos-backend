@@ -198,10 +198,18 @@ dotnet test
 
 Las pruebas utilizan una base de datos en memoria con Entity Framework, por lo que no modifican la base de datos de desarrollo.
 
-## Ejecutar pruebas con cobertura
+## Pruebas con cobertura mínima del 70%
+
+Para ejecutar las pruebas y validar una cobertura mínima del 70%:
 
 ```bash
-dotnet test --collect:"XPlat Code Coverage"
+dotnet test \
+  /p:CollectCoverage=true \
+  /p:CoverletOutputFormat=cobertura \
+  /p:ExcludeByFile="**/Program.cs%2c**/Migrations/*.cs%2c**/obj/**/*.cs" \
+  /p:Threshold=70 \
+  /p:ThresholdType=line \
+  /p:ThresholdStat=total
 ```
 
 El resultado de cobertura se genera dentro de la carpeta `TestResults`.
