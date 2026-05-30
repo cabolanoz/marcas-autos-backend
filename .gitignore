@@ -1,0 +1,75 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+out/
+artifacts/
+
+# .NET user-specific files
+*.user
+*.userosscache
+*.suo
+*.rsuser
+*.sln.docstates
+
+# Visual Studio / Rider / VS Code
+.vs/
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo
+
+# Rider
+*.sln.iml
+
+# Test results and coverage
+TestResults/
+coverage/
+coverage.cobertura.xml
+*.coverage
+*.coveragexml
+*.trx
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.assets.json
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# ASP.NET local settings / secrets
+secrets.json
+appsettings.Local.json
+appsettings.*.local.json
+
+# Docker
+docker-compose.override.yml
+
+# OS generated files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# Publish output
+publish/
+wwwroot/dist/
